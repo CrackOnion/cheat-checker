@@ -20,7 +20,7 @@ Run the checker with a single command in PowerShell.
 Copy and execute the following command:
 ## **General**
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex (iwr 'https://raw.githubusercontent.com/KROKODJIDO/cheat-checker/refs/heads/main/cheat_checker.ps1' -UseBasicParsing).Content
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex (iwr 'https://raw.githubusercontent.com/KROKODJIDO/cheat-checker/refs/heads/main/CheatCheckerRust.ps1' -UseBasicParsing).Content
 ```
 ⚖️ Disclaimer
 This tool is created for educational and research purposes only.
