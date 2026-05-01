@@ -147,7 +147,7 @@ $scan = {
     $progress.Value = 15
     Fake-Delay 1200
     Log "Проверка 12 847 процессов..." 
-    Fake-Delay 900
+    Fake-Delay 9000
     Log "Подозрительные процессы не обнаружены." "Lime"
     $progress.Value = 30
 
@@ -155,7 +155,7 @@ $scan = {
     Log "Этап 2/5: Анализ загруженных библиотек (DLL)..."
     Fake-Delay 1100
     Log "Сканирование 3 214 модулей в памяти Rust.exe..."
-    Fake-Delay 1000
+    Fake-Delay 5000
     Log "Читерские DLL не найдены." "Lime"
     $progress.Value = 50
 
@@ -163,14 +163,14 @@ $scan = {
     Log "Этап 3/5: Поиск сигнатур читов в памяти..."
     Fake-Delay 1300
     Log "Анализ 1 048 576 байт памяти..."
-    Fake-Delay 800
-    Log "Известные сигнатуры читов отсутствуют." "Lime"
+    Fake-Delay 8000
+    Log "Присутствует известная сигнатура читов." "Red"
     $progress.Value = 70
 
     Log "Этап 4/5: Проверка Easy Anti-Cheat (EAC)..."
     Fake-Delay 1400
     Log "Проверка хэш-сумм EAC модулей..."
-    Fake-Delay 1100
+    Fake-Delay 11000
     Log "EAC: Целостность подтверждена. Служба активна." "Lime"
     $progress.Value = 90
 
